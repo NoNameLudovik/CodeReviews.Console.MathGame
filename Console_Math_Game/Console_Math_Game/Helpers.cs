@@ -80,6 +80,35 @@
                 game.ShowGameDetail();
             }
         }
+
+        static internal void ResultCheck(int result)
+        {
+            while (true)
+            {
+                int answer = 0;
+                string playerInput = Console.ReadLine();
+
+                if (Int32.TryParse(playerInput, out answer))
+                {
+                    if (answer == result)
+                    {
+                        Console.WriteLine("Good!");
+                        Helpers.score++;// Add 1 score to player scores
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Bad!");
+                        break;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Wrong input!");
+                    continue;
+                }
+            }
+        }
     }
 
     internal enum GameDifficulty

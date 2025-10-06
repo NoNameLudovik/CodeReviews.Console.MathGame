@@ -7,7 +7,6 @@ namespace ConsoleMathGame
         internal void DivisionMode(GameDifficulty difficulty)
         {
             int result = 0;
-            int answer = 0;
             int[] numbers = Helpers.NumberGenerator(difficulty);
 
             while (true) //Find numbers for integer division result 
@@ -20,133 +19,46 @@ namespace ConsoleMathGame
             }
 
             result = numbers[0] / numbers[1];
-            while (true)
-            {
-                Console.WriteLine($"{numbers[0]} / {numbers[1]} = ");
-                string playerInput = Console.ReadLine();
 
-                if (Int32.TryParse(playerInput, out answer))
-                {
-                    if (answer == result)
-                    {
-                        Console.WriteLine("Good!");
-                        Helpers.score++;// Add 1 score to player scores
-                        break;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Bad!");
-                        break;
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Wrong input!");
-                    continue;
-                }
-            }
+            Console.WriteLine($"{numbers[0]} / {numbers[1]} = ");
+
+            Helpers.ResultCheck(result);
         }
 
         internal void MultiplicationMode(GameDifficulty difficulty)
         {
             int result = 0;
-            int answer = 0;
             int[] numbers = Helpers.NumberGenerator(difficulty);
 
             result = numbers[0] * numbers[1];
-            while (true)
-            {
-                Console.WriteLine($"{numbers[0]} * {numbers[1]} = ");
-                string playerInput = Console.ReadLine();
 
-                if (Int32.TryParse(playerInput, out answer))
-                {
-                    if (answer == result)
-                    {
-                        Console.WriteLine("Good!");
-                        Helpers.score++;// Add 1 score to player scores
-                        break;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Bad!");
-                        break;
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Wrong input!");
-                    continue;
-                }
-            }
+            Console.WriteLine($"{numbers[0]} * {numbers[1]} = ");
+
+            Helpers.ResultCheck(result);
         }
 
         internal void SubtractionMode(GameDifficulty difficulty)
         {
             int result = 0;
-            int answer = 0;
             int[] numbers = Helpers.NumberGenerator(difficulty);
 
             result = numbers[0] - numbers[1];
-            while (true)
-            {
-                Console.WriteLine($"{numbers[0]} - {numbers[1]} = ");
-                string playerInput = Console.ReadLine();
 
-                if (Int32.TryParse(playerInput, out answer))
-                {
-                    if (answer == result)
-                    {
-                        Console.WriteLine("Good!");
-                        Helpers.score++;// Add 1 score to player scores
-                        break;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Bad!");
-                        break;
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Wrong input!");
-                    continue;
-                }
-            }
+            Console.WriteLine($"{numbers[0]} - {numbers[1]} = ");
+
+            Helpers.ResultCheck(result);
         }
 
         internal void AdditionMode(GameDifficulty difficulty)
         {
             int result = 0;
-            int answer = 0;
             int[] numbers = Helpers.NumberGenerator(difficulty);
 
             result = numbers[0] + numbers[1];
-            while (true)
-            {
-                Console.WriteLine($"{numbers[0]} + {numbers[1]} = ");
-                string playerInput = Console.ReadLine();
 
-                if (Int32.TryParse(playerInput, out answer))
-                {
-                    if (answer == result)
-                    {
-                        Console.WriteLine("Good!");
-                        Helpers.score++;// Add 1 score to player scores
-                        break;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Bad!");
-                        break;
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Wrong input!");
-                    continue;
-                }
-            }
+            Console.WriteLine($"{numbers[0]} + {numbers[1]} = ");
+
+            Helpers.ResultCheck(result);
         }
     }
 }
