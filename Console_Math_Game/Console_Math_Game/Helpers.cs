@@ -2,7 +2,7 @@
 {
     internal class Helpers
     {
-        static internal int score = 0;
+        static internal int score;
         static List<Game> gamesHistory = new List<Game>();//List of games played in actual session
 
         static internal void ShowScore() //Showing score in the end of game.
